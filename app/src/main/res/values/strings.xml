@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">RecipeListApp</string>
+    <string name="label_recipe_title">Recipe Title</string>
+    <string name="label_recipe_description">Recipe Description</string>
+    <string name="label_images">Images</string>
+    <string name="label_done">Done</string>
+    <string name="title_add_recipe">Add Recipe</string>
+    <string name="label_recipes_title">Your Recipes</string>
+    <string name="label_empty" />
+    <string name="message_success_saving">Recipe was added successfully</string>
+</resources>

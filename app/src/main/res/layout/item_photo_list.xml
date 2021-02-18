@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.sample.recipelistapp.data.model.RecipePhoto" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_small"
+        android:elevation="@dimen/size_medium">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/gray">
+
+            <ImageView
+                android:id="@+id/ivPlus"
+                android:layout_width="@dimen/size_huge"
+                android:layout_height="@dimen/size_huge"
+                android:src="@drawable/ic_plus"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivPhoto"
+                android:layout_width="@dimen/size_image_width_height"
+                android:layout_height="@dimen/size_image_width_height"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcPath="@{data.photoPath}" />
+
+            <ImageView
+                android:id="@+id/ivDelete"
+                android:layout_width="@dimen/size_small_icon"
+                android:layout_height="@dimen/size_small_icon"
+                android:background="@color/white"
+                android:src="@drawable/ic_delete"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

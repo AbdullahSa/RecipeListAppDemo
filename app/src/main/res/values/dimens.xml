@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Common Sizes -->
+    <dimen name="size_zero">0dp</dimen>
+    <dimen name="size_small">4dp</dimen>
+    <dimen name="size_medium">8dp</dimen>
+    <dimen name="size_huge">32dp</dimen>
+    <dimen name="size_large">16dp</dimen>
+    <!-- END -->
+
+    <!-- Saving Page Sizes -->
+    <dimen name="size_image_width_height">120dp</dimen>
+    <dimen name="size_small_icon">24dp</dimen>
+    <!-- END -->
+</resources>

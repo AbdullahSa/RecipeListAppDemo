@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.sample.recipelistapp.data.model.RecipePhoto" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/TextAppearanceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_large"
+            android:layout_marginTop="@dimen/size_large"
+            android:layout_marginEnd="@dimen/size_large"
+            android:text="@string/label_recipe_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="@dimen/size_zero"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_large"
+            android:layout_marginEnd="@dimen/size_large"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            style="@style/TextAppearanceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_large"
+            android:layout_marginTop="@dimen/size_large"
+            android:layout_marginEnd="@dimen/size_large"
+            android:text="@string/label_recipe_description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etTitle" />
+
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="@dimen/size_zero"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_large"
+            android:layout_marginEnd="@dimen/size_large"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+
+        <TextView
+            android:id="@+id/tvImages"
+            style="@style/TextAppearanceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_large"
+            android:layout_marginTop="@dimen/size_large"
+            android:layout_marginEnd="@dimen/size_large"
+            android:text="@string/label_images"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etDescription" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvImageList"
+            android:layout_width="@dimen/size_zero"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_large"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvImages"
+            tools:itemCount="4"
+            tools:listitem="@layout/item_photo_list" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
