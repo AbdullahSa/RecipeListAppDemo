@@ -41,6 +41,7 @@ class RecipeListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        viewModel.getRecipeList()
         val parent = (activity as MainActivity)
         parent.toolbar.tvTitle.text = getString(R.string.label_recipes_title)
         setHasOptionsMenu(true)

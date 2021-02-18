@@ -18,11 +18,7 @@ class RecipeListViewModel @Inject constructor(private val getRecipeListUseCase: 
 
     private var job: Job? = null
 
-    init {
-        getRecipeList()
-    }
-
-    private fun getRecipeList() {
+    fun getRecipeList() {
         job = CoroutineScope(Dispatchers.IO).launch {
             getRecipeListUseCase.getRecipeList().collect {
                 withContext(Dispatchers.Main) {
